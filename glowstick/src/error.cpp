@@ -5,9 +5,7 @@ namespace glowstick {
         message(make_shared<std::string>(message))
     {}
 
-    error::error(const error& other) noexcept {
-        message = other.message;
-    }
+    error::error(const error& other) noexcept : message(other.message) {}
 
     error& error::operator=(const error& other) noexcept {
         message = other.message;

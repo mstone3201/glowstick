@@ -7,10 +7,9 @@ namespace glowstick::vulkan {
     {}
 
     error::error(const error& other) noexcept :
-        glowstick::error(other)
-    {
-        result = other.result;
-    }
+        glowstick::error(other),
+        result(other.result)
+    {}
 
     error& error::operator=(const error& other) noexcept {
         glowstick::error::operator=(other);

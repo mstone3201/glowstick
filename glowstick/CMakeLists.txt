@@ -9,7 +9,9 @@ add_library(glowstick STATIC
     src/renderer.cpp
     src/vulkan/context.cpp
     src/vulkan/error.cpp
- )
+    src/vulkan/device.cpp
+    src/vulkan/queue.cpp
+)
 
 target_compile_definitions(glowstick PRIVATE $<$<CONFIG:Debug>:GLOWSTICK_DEBUG>)
 
